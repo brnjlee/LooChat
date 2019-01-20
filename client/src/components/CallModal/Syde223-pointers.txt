@@ -1,0 +1,39 @@
+Pointers and Dynamic Memory (Recapp):
+- Why Dynamic Memory?
+More space available
+Persist beyond scope {}
+We chooose when to allocate and deaccociate
+
+Pointer:
+Address of variable
+int* ip1 = &i1 //(initialize pointer) to (address of i1)
+
+Stack Pointer:
+int i2; //stack
+int* ip2 = &i2 //points to stack
+
+Heap Pointer:
+int* ip = new int(5); //points to allocated heap space
+
+
+delete ip; //whenever using new call delete 
+
+To print pointers:
+cout << *ip
+		^Dereferencing location
+
+cout << ip //prints pointed location
+
+Proper memory allocation:
+- Call delete for each new() invocation
+- Do not have to delete pointers themselves
+
+class pointers:
+Person* p = new Person;
+(*p).get.name();
+or p -> get.name();
+
+Passing pointer in function: 
+- can change pointing value/cannot change location
+
+int** idp = &ip //pointer to pointer || double pointer

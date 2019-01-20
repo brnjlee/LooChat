@@ -1,0 +1,24 @@
+#search-container {
+  width: 100%;
+  height: 50px;
+  //border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#user-search {
+  border: none;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  max-height: 100px;
+  width: 80%;
+  background: #f2f2f2;
+  resize: none;
+  font-family: inherit;
+  &:focus {
+    outline: none;
+  }
+}

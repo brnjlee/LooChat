@@ -1,0 +1,50 @@
+#user-card {
+  width: 100%;
+  background-color: white;
+  height: 70px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px; }
+  #user-card #user-avatar {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    margin: 10px; }
+  #user-card #user-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1; }
+    #user-card #user-details #user-name {
+      margin-bottom: 10px; }
+    #user-card #user-details #user-username {
+      color: black;
+      opacity: 0.5; }
+  #user-card .user-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    border-radius: 15px;
+    margin: 20px;
+    cursor: pointer;
+    transition: all 200ms ease; }
+    #user-card .user-button .button-icon {
+      font-size: 19px;
+      font-weight: 700; }
+  #user-card .add {
+    border: 1px solid #3385ff;
+    color: #3385ff; }
+    #user-card .add:hover {
+      color: #33bbff;
+      border: 1px solid #33bbff; }
+  #user-card .sent {
+    border: 1px solid #8c8c8c;
+    color: #8c8c8c; }
+  #user-card .message {
+    border: 1px solid #3caea3;
+    color: #3caea3; }
+    #user-card .message:hover {
+      color: #33bbff;
+      border: 1px solid #33bbff; }

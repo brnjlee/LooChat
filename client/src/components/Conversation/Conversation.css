@@ -1,0 +1,44 @@
+#conversation {
+  width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+  cursor: pointer; }
+  #conversation:hover {
+    background-color: #f2f2f2; }
+  #conversation #conversation-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%; }
+  #conversation .details {
+    flex-direction: column; }
+  #conversation .conversation-avatar {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 100%; }
+  #conversation #title {
+    margin-bottom: 10px; }
+  #conversation #content {
+    color: black;
+    opacity: 0.5; }
+
+#search-conversation {
+  width: 100%;
+  height: 50px;
+  background-color: #ffffff;
+  cursor: pointer; }
+  #search-conversation:hover {
+    background-color: #f2f2f2; }
+  #search-conversation #conversation-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%; }
+  #search-conversation .details {
+    flex-direction: column; }
+  #search-conversation .conversation-avatar {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 100%; }

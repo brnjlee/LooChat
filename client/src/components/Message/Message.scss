@@ -1,0 +1,30 @@
+#message-user {
+  max-width: 275px;
+  padding: 2px 5px 2px 5px;
+  white-space: pre-wrap;
+  background-color: #3385ff;
+  border-radius: 20px 20px 2px 20px;
+  float: right;
+  margin-right: 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  color: white;
+}
+
+#message-received {
+  padding: 2px 5px 2px 5px;
+  max-width: 275px;
+  white-space: pre-wrap;
+  background-color: #ebebeb;
+  border-radius: 20px 20px 20px 2px;
+  float: left;
+  margin: 5px 5px 5px 20px;
+  left: 20px;
+  font-size: 16px;
+}
+
+#message-content {
+  padding: 2px;
+  margin: 5px 3px 5px 3px;
+  word-wrap: break-word;
+}

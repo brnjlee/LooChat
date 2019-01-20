@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Nunito,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+#master-wrapper {
+	display: flex;
+	height: 100vh;
+	background-color: #f2f2f2;
+	flex-direction: row;
+	align-items: center;
+}
+
+.form-ctrl {
+	width: 400px;
+	height: 50px;
+	border-radius: 5px;
+	font-size: 20px;
+	border: none;
+	padding: 10px;
+
+	&:focus {
+		border: none;
+		outline: none;
+	}
+	&:-webkit-autofill,
+	&:-webkit-autofill:hover,
+	&:-webkit-autofill:focus,
+	&:-webkit-autofill:active  {
+		-webkit-box-shadow: 0 0 0 30px white inset;
+	}
+}
+
+
+
+.center-container {
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+
+	background: linear-gradient(321deg, #aeaff3, #5759d0, #6c6fe6, #5faae6, #5594c6, #7db9e8);
+	background-size: 800% 900%;
+	-webkit-animation: AnimationName 13s ease infinite;
+	-moz-animation: AnimationName 13s ease infinite;
+	animation: AnimationName 13s ease infinite;
+
+	@-webkit-keyframes AnimationName {
+		0%{background-position:52% 0%}
+		50%{background-position:49% 100%}
+		100%{background-position:52% 0%}
+	}
+	@-moz-keyframes AnimationName {
+		0%{background-position:52% 0%}
+		50%{background-position:49% 100%}
+		100%{background-position:52% 0%}
+	}
+	@keyframes AnimationName {
+		0%{background-position:52% 0%}
+		50%{background-position:49% 100%}
+		100%{background-position:52% 0%}
+	}
+
+	#inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.form-group {
+		margin: 10px;
+	}
+	.btn-ctrl {
+		cursor: pointer;
+		width: 425px;
+		height: 50px;
+		border-radius: 25px;
+		font-size: 15px;
+		font-weight: 500;
+		border: none;
+		background-color: limegreen;
+		color: white;
+
+		&:focus {
+			border: none;
+			outline: none;
+		}
+	}
+
+	.sign-link {
+		color: #f2f2f2;
+		text-decoration: none;
+	}
+}
+
+.pad-top {
+	margin-top:100px;
+}

@@ -1,0 +1,82 @@
+#call-modal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
+  height: 120px;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 1px #aaaaaa;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  background: linear-gradient(321deg, #aeaff3, #5759d0, #6c6fe6, #5faae6, #5594c6, #7db9e8);
+  background-size: 1200% 1200%;
+  color: white;
+  z-index: 999;
+  right: 0;
+  -webkit-animation: AnimationName 13s ease infinite;
+  -moz-animation: AnimationName 13s ease infinite;
+  animation: AnimationName 13s ease infinite; }
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 52% 0%; }
+  50% {
+    background-position: 49% 100%; }
+  100% {
+    background-position: 52% 0%; } }
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 52% 0%; }
+  50% {
+    background-position: 49% 100%; }
+  100% {
+    background-position: 52% 0%; } }
+
+@keyframes AnimationName {
+  0% {
+    background-position: 52% 0%; }
+  50% {
+    background-position: 49% 100%; }
+  100% {
+    background-position: 52% 0%; } }
+  #call-modal #top-container {
+    display: flex;
+    align-items: center;
+    width: 90%; }
+    #call-modal #top-container .avatar {
+      width: 40px;
+      height: 40px;
+      margin-right: 20px; }
+    #call-modal #top-container #name {
+      font-size: 20px; }
+  #call-modal #bottom-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around; }
+  #call-modal #accept {
+    color: #99e699;
+    cursor: pointer;
+    text-decoration: none !important;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease; }
+    #call-modal #accept:hover {
+      color: white; }
+  #call-modal #decline {
+    color: #ff5c33;
+    cursor: pointer;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 300ms ease; }
+    #call-modal #decline:hover {
+      color: white; }
+  #call-modal .material-icons {
+    font-size: 25px; }
