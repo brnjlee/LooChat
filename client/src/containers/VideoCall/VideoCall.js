@@ -175,24 +175,22 @@ class VideoCall extends Component {
     render() {
         return (
             <div id="VideoCallContainer">
-                <div id='video-container'>
-                    <video id='my-video' ref={(ref) => {this.myVideo = ref}} />
-                    <video id='user-video' ref={(ref) => {this.userVideo = ref}} />
-                </div>
+                <video id='my-video' ref={(ref) => {this.myVideo = ref}} />
+                <video id='user-video' ref={(ref) => {this.userVideo = ref}} />
                 {this.state.requestInProgress && <div id="connection-message">Connecting...</div>}
                 <div id="video-options">
                     <div className={this.state.muted? "option selected" : "option"} onClick={this.toggleAudio}>
-                        <i className="material-icons">
+                        <i className="material-icons icon">
                             mic_off
                         </i>
                     </div>
                     <div className="option decline" onClick={this.endCall}>
-                        <i className="material-icons end-call">
+                        <i className="material-icons end-call icon">
                             call_end
                         </i>
                     </div>
                     <div className="option mute" onClick={() => {}}>
-                        <i className="material-icons">
+                        <i className="material-icons icon">
                             videocam_off
                         </i>
                     </div>

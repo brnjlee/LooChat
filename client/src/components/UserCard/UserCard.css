@@ -1,50 +1,38 @@
 #user-card {
   width: 100%;
-  background-color: white;
-  height: 70px;
-  border-radius: 5px;
+  height: 80px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 10px; }
+  transition: all 0.3s ease; }
   #user-card #user-avatar {
-    border-radius: 100%;
-    width: 40px;
-    height: 40px;
-    margin: 10px; }
-  #user-card #user-details {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    margin-left: 0;
+    border-radius: 30%; }
+  #user-card .details {
     display: flex;
-    flex-direction: column;
-    flex: 1; }
-    #user-card #user-details #user-name {
+    flex: 1;
+    flex-direction: column; }
+    #user-card .details #title {
       margin-bottom: 10px; }
-    #user-card #user-details #user-username {
-      color: black;
+    #user-card .details #username {
       opacity: 0.5; }
   #user-card .user-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4px 10px;
-    border-radius: 15px;
-    margin: 20px;
+    padding: 10px 15px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: all 200ms ease; }
+    transition: all 200ms ease;
+    background-color: #393f4a; }
+    #user-card .user-button:hover {
+      background-color: #40444f; }
     #user-card .user-button .button-icon {
       font-size: 19px;
       font-weight: 700; }
-  #user-card .add {
-    border: 1px solid #3385ff;
-    color: #3385ff; }
-    #user-card .add:hover {
-      color: #33bbff;
-      border: 1px solid #33bbff; }
-  #user-card .sent {
-    border: 1px solid #8c8c8c;
-    color: #8c8c8c; }
-  #user-card .message {
-    border: 1px solid #3caea3;
-    color: #3caea3; }
-    #user-card .message:hover {
-      color: #33bbff;
-      border: 1px solid #33bbff; }
+  #user-card .message a {
+    text-decoration: none;
+    color: white; }

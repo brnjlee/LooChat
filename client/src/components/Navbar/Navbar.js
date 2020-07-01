@@ -1,71 +1,90 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { logoutUser } from '../../actions/authentication';
-import { withRouter } from 'react-router-dom';
-import { FiMessageSquare, FiSearch, FiLogOut } from "react-icons/fi";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { logoutUser } from "../../actions/authentication";
+import { withRouter } from "react-router-dom";
+import {
+  FiMessageSquare,
+  FiSearch,
+  FiLogOut,
+  FiVideo,
+  FiPlus
+} from "react-icons/fi";
+import { cx } from "classnames";
 
-import './Navbar.css'
+import "./Navbar.css";
 
 class Navbar extends Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
 
-    constructor() {
-        super();
-        this.state = {
-            expanded: false
-        }
-    }
+  onLogout = e => {
+    e.preventDefault();
+    this.props.logoutUser(this.props.history);
+  };
 
-    onLogout = (e) => {
-        e.preventDefault();
-        this.props.logoutUser(this.props.history);
-    }
+  onNav(page) {
+    this.props.changePage(page);
+  }
 
-    render() {
-        const {isAuthenticated} = this.props.auth;
+  render() {
+    const {
+      page,
+      auth: { isAuthenticated }
+    } = this.props;
 
-        return (
-          <div>
-              {isAuthenticated && 
-              <nav className={this.state.expanded? "navbar navbar-active": "navbar"}>
-                  <div id="navbar-nav">
-                      <div className="nav-item">
-                          <div className={this.state.expanded? "hamburger hamburger-active": "hamburger"}
-                               onClick={() => this.setState({expanded: !this.state.expanded})}
-                          >
-                              <span id="top"></span>
-                              <span id="middle"></span>
-                              <span id="bottom"></span>
-                          </div>
-                      </div>
-                      <Link className="nav-item nav-body" to="/dashboard">
-                          <FiMessageSquare className="material-icons icon" />
-                          <span id="option-text">Messages</span>
-                      </Link>
-                      <Link className="nav-item nav-body" to="/find">
-                          <FiSearch className="material-icons icon" />
-                          <span id="option-text">Find</span>
-                      </Link>
-                      <div className="nav-item nav-body" style={{flex: 1, alignItems: 'flex-end'}} onClick={this.onLogout.bind(this)}>
-                          <FiLogOut className="material-icons icon" style={{paddingBottom: 15}} />
-                          <span id="option-text">Log Out</span>
-                      </div>
-                  </div>
-              </nav>
-              }
-              
+    const isSelected = pageName => (pageName === page ? "selected" : null);
+
+    return (
+      isAuthenticated && (
+        <div className="navbar">
+          <div
+            className={`nav-item ${isSelected("dashboard")}`}
+            onClick={this.onNav.bind(this, "dashboard")}
+          >
+            <FiMessageSquare className="material-icons icon" />
           </div>
-        )
-    }
+          <div
+            className={`nav-item ${isSelected("search")}`}
+            onClick={this.onNav.bind(this, "search")}
+          >
+            <FiSearch className="material-icons icon" />
+          </div>
+          <div
+            className={`nav-item ${isSelected("add")}`}
+            onClick={this.onNav.bind(this, "add")}
+          >
+            <FiPlus className="material-icons icon" />
+          </div>
+          <div
+            className={`nav-item ${isSelected("call")}`}
+            onClick={this.onNav.bind(this, "call")}
+          >
+            <FiVideo className="material-icons icon" />
+          </div>
+          <div
+            className={`nav-item ${isSelected("user")}`}
+            onClick={this.onLogout.bind(this)}
+          >
+            <FiLogOut className="material-icons icon" />
+          </div>
+        </div>
+      )
+    );
+  }
 }
 Navbar.propTypes = {
   logoutUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired
-}
+};
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   auth: state.auth
 });
 
-export default connect(mapStateToProps, {logoutUser})(withRouter(Navbar));
+export default connect(
+  mapStateToProps,
+  { logoutUser }
+)(withRouter(Navbar));

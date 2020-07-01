@@ -11,3 +11,16 @@ export default class MediaHandler {
         })
     }
 }
+
+export function notify(message, avatar) {
+    if (Notification.permission !== 'granted') return
+    else {
+        var notification = new Notification(message, {
+            icon: avatar,
+        });
+        notification.onclick = function() {
+            window.focus();
+            this.close(); 
+        };
+    }
+}

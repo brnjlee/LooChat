@@ -1,32 +1,50 @@
 .input_msg_write {
-  border: 1px solid #d9d9d9;
-  border-radius: 25px;
+  border: none;
+  border-radius: 10px;
   font-size: 16px;
-  padding: 10px 20px;
-  max-height: 100px;
-  width: 80%;
-  background: white;
+  padding: 15px 65px 15px 20px;
+  max-height: 125px;
+  width: 100%;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box;
+  background: #40444f;
+  color: white;
   resize: none;
   font-family: inherit;
+  transition: all 100ms ease-in;
   &:focus {
     outline: none;
+    background: #454550;
   }
-  &::placeholder { opacity: 0.5 }
+  &::placeholder {
+    opacity: 0.5;
+  }
+}
+.input_msg_write::-webkit-scrollbar {
+  display: none;
 }
 
 #input-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
-
+  position: relative;
+  width: 100%;
 }
 
 #send-button {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  margin-top: -20px;
   cursor: pointer;
-  margin-left: 10px;
-  background-color: #00cc00;
-  padding: 10px 15px;
-  color: white;
+  background-color: white;
+  height: 36px;
+  padding: 0px 13px;
+  color: #40444f;
   border-radius: 10px;
+
+  .send-icon {
+    position: relative;
+    top: calc(50% - 10px);
+    font-size: 20px;
+  }
 }

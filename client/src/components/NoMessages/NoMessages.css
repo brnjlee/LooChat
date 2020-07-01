@@ -1,0 +1,16 @@
+.no-messages-container {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #63697a; }
+  .no-messages-container .header {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold; }
+  .no-messages-container .content {
+    margin-top: 20px;
+    font-size: 15px;
+    text-align: center; }

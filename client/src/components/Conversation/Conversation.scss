@@ -1,10 +1,13 @@
-#conversation {
+.conversation {
   width: 100%;
   height: 80px;
-  background-color: #ffffff;
   cursor: pointer;
+  transition: all 0.3s ease;
   &:hover {
-    background-color: #f2f2f2;
+    transform: translate(5px);
+    .details {
+      opacity: 1;
+    }
   }
 
   #conversation-link {
@@ -12,17 +15,21 @@
     flex-direction: row;
     align-items: center;
     height: 100%;
+    color: inherit;
   }
 
   .details {
+    transition: all 0.3s ease;
     flex-direction: column;
+    opacity: 0.5;
   }
 
   .conversation-avatar {
     width: 50px;
     height: 50px;
     margin: 10px;
-    border-radius: 100%;
+    margin-left: 0;
+    border-radius: 30%;
   }
 
   #title {
@@ -30,38 +37,32 @@
   }
 
   #content {
-    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     opacity: 0.5;
   }
-
 }
 
-#search-conversation {
-  width: 100%;
+.searchConversation {
   height: 50px;
-  background-color: #ffffff;
-  cursor: pointer;
   &:hover {
-    background-color: #f2f2f2;
+    // background-color: #f2f2f2;
   }
-
-  #conversation-link {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100%;
+  #title {
+    margin-bottom: 0;
   }
-
-  .details {
-    flex-direction: column;
-  }
-
   .conversation-avatar {
     width: 30px;
     height: 30px;
     margin: 10px;
-    border-radius: 100%;
+    margin-left: 0;
+    border-radius: 30%;
   }
-
 }
 
+.selected {
+  .details {
+    opacity: 1;
+  }
+}

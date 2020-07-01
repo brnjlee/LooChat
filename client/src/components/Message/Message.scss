@@ -1,21 +1,22 @@
 #message-user {
   max-width: 275px;
-  padding: 2px 5px 2px 5px;
+  padding: 4px 8px;
   white-space: pre-wrap;
-  background-color: #3385ff;
+  background-color: #51c44e;
   border-radius: 20px 20px 2px 20px;
   float: right;
   margin-right: 20px;
   font-size: 16px;
+  font-weight: 500;
   margin-top: 10px;
   color: white;
 }
 
 #message-received {
-  padding: 2px 5px 2px 5px;
   max-width: 275px;
+  padding: 4px 8px;
   white-space: pre-wrap;
-  background-color: #ebebeb;
+  background-color: #393f4a;
   border-radius: 20px 20px 20px 2px;
   float: left;
   margin: 5px 5px 5px 20px;

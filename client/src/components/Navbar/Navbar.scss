@@ -1,61 +1,52 @@
 .navbar {
-  width: 70px;
-  height: 97vh;
-  margin-left: 10px;
-  border-radius: 10px;
-  background-color: white;
+  width: 100%;
+  height: 70px;
+  border-radius: 20px;
+  background-color: #2f343c;
   transition: all 200ms ease;
-  overflow-x: hidden;
-}
-
-.navbar-active {
-  width: 250px;
-}
-
-#navbar-nav {
-  width: 250px;
   display: flex;
-  flex-direction: column;
-  height: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .nav-item {
-  width: 100%;
-  height: 65px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
   transition: all 100ms ease;
   cursor: pointer;
   text-decoration: none;
+  height: 50px;
+  padding: 0 17px;
+  border-radius: 20%;
 
-  #option-text {
-    padding: 20px;
-    color: #c6c6c6;
-    font-size: 20px;
+  &.selected {
+    background-color: #272930;
+    .icon {
+      color: white;
+    }
+  }
+
+  &:hover {
+    background-color: #272930;
+    .icon {
+      color: white;
+    }
+  }
+
+  .icon {
+    position: relative;
+    top: calc(50% - 12px);
+    font-size: 24px;
+    color: #a7a8ad;
   }
 }
 
 .nav-body {
-  
 }
-
 
 .avatar {
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  margin-left: 20px;
-}
-.icon {
-  transition: all 100ms ease;
-  font-size: 30px;
-  color: #c6c6c6;
-  margin-left: 20px;
-  &:hover {
-    color: #3385ff;
-  }
 }
 
 .hamburger {
@@ -63,7 +54,6 @@
   display: flex;
   flex-direction: column;
   margin-left: 22.5px;
-
 
   span {
     width: 25px;
