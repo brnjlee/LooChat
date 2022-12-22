@@ -18,7 +18,7 @@
     "express": "^4.16.4",
     "gravatar": "^1.8.0",
     "growl": "^1.10.5",
-    "jsonwebtoken": "^8.4.0",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^5.3.13",
     "nodemon": "^1.18.9",
     "passport": "^0.4.0",
